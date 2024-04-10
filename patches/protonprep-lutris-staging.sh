@@ -351,6 +351,10 @@
     echo "WINE: -BACKPORT- LibreVR Revive backport"
     patch -Np1 < ../patches/wine-hotfixes/upstream/2403.patch
 
+    echo "WINE: -BACKPORT- dsound"
+    patch -Np1 < ../patches/wine-hotfixes/upstream/dsound-Reject-WAVEFORMATEX-formats-with-more-than-two-channels.patch
+    patch -Np1 < ../patches/wine-hotfixes/upstream/dsound-Initialize-MTA-in-IDirectSound_Initialize.patch
+
 ### END WINE HOTFIX/BACKPORT SECTION ###
 
 ### (2-5) WINE PENDING UPSTREAM SECTION ###
