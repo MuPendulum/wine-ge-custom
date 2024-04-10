@@ -110,7 +110,9 @@
     -W shell32-registry-lookup-app \
     -W winepulse-PulseAudio_Support \
     -W d3dx9_36-D3DXStubs \
-    -W ntdll-ext4-case-folder
+    -W ntdll-ext4-case-folder \
+    -W dsound-EAX \
+    -W dsound-Fast_Mixer
 
     # NOTE: Some patches are applied manually because they -do- apply, just not cleanly, ie with patch fuzz.
     # A detailed list of why the above patches are disabled is listed below:
@@ -129,6 +131,8 @@
     # d3dx11_43-D3DX11CreateTextureFromMemory - manually applied
     # ddraw-Device_Caps - conflicts with proton's changes
     # ddraw-version-check - conflicts with proton's changes, disabled in 8.0
+    # dsound-Fast_Mixer - Causes audio crackling in FFXI and PSO:BB
+    # dsound-EAX - relies on dsound-Fast_Mixer
 
     # dbghelp-Debug_Symbols - see below:
     # Sancreed — 11/21/2021
